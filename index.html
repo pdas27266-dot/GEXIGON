@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>GEXIGON — Contribute. Earn Points. Build Reputation.</title>
-
-  <meta name="description"
-        content="GEXIGON is a community-driven Web3 project where contribution builds reputation.">
+  <title>GEXIGON — Community First</title>
 
   <style>
     * {
@@ -18,114 +14,96 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #080b12;
+      background: #0b0f19;
       color: #ffffff;
       line-height: 1.6;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
     header {
-      border-bottom: 1px solid #1d2330;
-      background: #080b12;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .nav {
-      max-width: 1100px;
-      margin: auto;
-      padding: 18px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 20px 8%;
+      border-bottom: 1px solid #222938;
     }
 
     .logo {
       font-size: 24px;
-      font-weight: 800;
+      font-weight: bold;
       letter-spacing: 2px;
     }
 
-    nav {
-      display: flex;
-      gap: 22px;
-      font-size: 14px;
-      color: #aeb6c7;
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+      margin-left: 20px;
     }
 
     nav a:hover {
-      color: #ffffff;
+      color: #fff;
     }
 
     .hero {
-      max-width: 1000px;
-      margin: auto;
-      padding: 110px 20px 90px;
       text-align: center;
+      padding: 100px 20px;
     }
 
     .hero h1 {
-      font-size: clamp(48px, 10vw, 90px);
+      font-size: 58px;
       letter-spacing: 5px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     .hero p {
+      color: #aaa;
+      font-size: 18px;
       max-width: 650px;
       margin: auto;
-      color: #aeb6c7;
-      font-size: 19px;
     }
 
     .buttons {
       margin-top: 35px;
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
     }
 
     .btn {
-      padding: 13px 22px;
-      border-radius: 10px;
-      font-weight: 700;
-      border: 1px solid #303746;
-      background: #111722;
+      display: inline-block;
+      padding: 14px 25px;
+      margin: 8px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #333;
+      color: white;
+      background: #151b2b;
     }
 
-    .btn.primary {
-      background: #ffffff;
-      color: #080b12;
+    .btn:hover {
+      background: #20283d;
     }
 
     section {
-      max-width: 1000px;
+      padding: 70px 8%;
+      max-width: 1100px;
       margin: auto;
-      padding: 75px 20px;
     }
 
-    .section-title {
+    h2 {
       text-align: center;
+      margin-bottom: 40px;
       font-size: 32px;
-      margin-bottom: 35px;
     }
 
-    .grid {
+    .cards {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
 
     .card {
-      background: #10151f;
-      border: 1px solid #202735;
-      border-radius: 14px;
+      background: #111725;
+      border: 1px solid #222938;
       padding: 25px;
+      border-radius: 12px;
     }
 
     .card h3 {
@@ -133,67 +111,54 @@
     }
 
     .card p {
-      color: #9da7b8;
-      font-size: 14px;
+      color: #aaa;
     }
 
-    .points {
+    table {
       width: 100%;
       border-collapse: collapse;
-      background: #10151f;
-      border-radius: 12px;
+      background: #111725;
+      border-radius: 10px;
       overflow: hidden;
     }
 
-    .points th,
-    .points td {
-      padding: 16px;
+    th, td {
+      padding: 15px;
+      border-bottom: 1px solid #222938;
       text-align: left;
-      border-bottom: 1px solid #202735;
     }
 
-    .points th {
-      color: #ffffff;
-    }
-
-    .points td {
-      color: #aeb6c7;
+    th {
+      background: #171e30;
     }
 
     .note {
-      margin-top: 20px;
-      padding: 18px;
-      border: 1px solid #303746;
-      border-radius: 12px;
-      color: #9da7b8;
+      color: #888;
       font-size: 14px;
+      margin-top: 20px;
+      text-align: center;
     }
 
     footer {
-      border-top: 1px solid #1d2330;
       text-align: center;
-      padding: 35px 20px;
-      color: #7f899b;
-      font-size: 14px;
+      padding: 40px 20px;
+      color: #777;
+      border-top: 1px solid #222938;
+      margin-top: 50px;
     }
 
-    @media (max-width: 750px) {
-      nav {
-        display: none;
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
       }
 
-      .grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 500px) {
-      .grid {
-        grid-template-columns: 1fr;
+      nav a {
+        margin: 0 7px;
       }
 
-      .hero {
-        padding-top: 80px;
+      .hero h1 {
+        font-size: 42px;
       }
     }
   </style>
@@ -201,142 +166,116 @@
 
 <body>
 
-  <header>
-    <div class="nav">
-      <div class="logo">GEXIGON</div>
+<header>
+  <div class="logo">GEXIGON</div>
 
-      <nav>
-        <a href="#how">How It Works</a>
-        <a href="#points">Points</a>
-        <a href="https://x.com/gexigon" target="_blank">X</a>
-        <a href="https://t.me/gexigon" target="_blank">Telegram</a>
-      </nav>
+  <nav>
+    <a href="#how">How It Works</a>
+    <a href="#points">Points</a>
+    <a href="https://x.com/gexigon" target="_blank">X</a>
+    <a href="https://t.me/gexigon" target="_blank">Telegram</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>GEXIGON</h1>
+
+  <p>
+    Contribute. Earn Points. Build Reputation.
+  </p>
+
+  <p style="margin-top:15px;">
+    GEXIGON is a community-driven Web3 project where contribution builds reputation.
+  </p>
+
+  <div class="buttons">
+    <a class="btn" href="https://x.com/gexigon" target="_blank">
+      Follow on X
+    </a>
+
+    <a class="btn" href="https://t.me/gexigon" target="_blank">
+      Join Telegram
+    </a>
+  </div>
+</section>
+
+<section id="how">
+  <h2>How It Works</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>01 — Join</h3>
+      <p>Join the GEXIGON community through X and Telegram.</p>
     </div>
-  </header>
 
-  <main>
+    <div class="card">
+      <h3>02 — Contribute</h3>
+      <p>Complete useful community tasks and campaigns.</p>
+    </div>
 
-    <section class="hero">
-      <h1>GEXIGON</h1>
+    <div class="card">
+      <h3>03 — Earn Points</h3>
+      <p>Approved contributions earn GEXIGON Points.</p>
+    </div>
 
-      <p>
-        Contribute. Earn Points. Build Reputation.
-      </p>
+    <div class="card">
+      <h3>04 — Build Reputation</h3>
+      <p>Your contribution history helps build your community reputation.</p>
+    </div>
 
-      <p style="margin-top:15px;">
-        A community-driven Web3 ecosystem where meaningful
-        participation builds reputation and unlocks future opportunities.
-      </p>
+  </div>
+</section>
 
-      <div class="buttons">
-        <a class="btn primary"
-           href="https://t.me/gexigon"
-           target="_blank">
-          Join Community
-        </a>
+<section id="points">
+  <h2>Initial Points System</h2>
 
-        <a class="btn" href="#how">
-          Learn More
-        </a>
-      </div>
-    </section>
+  <table>
+    <tr>
+      <th>Activity</th>
+      <th>Points</th>
+    </tr>
 
+    <tr>
+      <td>Join Telegram</td>
+      <td>+10</td>
+    </tr>
 
-    <section id="how">
+    <tr>
+      <td>Follow X</td>
+      <td>+10</td>
+    </tr>
 
-      <h2 class="section-title">How It Works</h2>
+    <tr>
+      <td>Daily Useful Contribution</td>
+      <td>+5</td>
+    </tr>
 
-      <div class="grid">
+    <tr>
+      <td>Approved Community Post</td>
+      <td>+10</td>
+    </tr>
 
-        <div class="card">
-          <h3>01 — Join</h3>
-          <p>
-            Join the GEXIGON community through Telegram and X.
-          </p>
-        </div>
+    <tr>
+      <td>Verified Referral</td>
+      <td>+20</td>
+    </tr>
 
-        <div class="card">
-          <h3>02 — Contribute</h3>
-          <p>
-            Participate in discussions, campaigns and useful community activities.
-          </p>
-        </div>
+    <tr>
+      <td>Special Campaign</td>
+      <td>Variable</td>
+    </tr>
+  </table>
 
-        <div class="card">
-          <h3>03 — Earn Points</h3>
-          <p>
-            Complete verified tasks and earn contribution points.
-          </p>
-        </div>
+  <p class="note">
+    Points are participation metrics and do not represent guaranteed token
+    allocations, financial returns, or investment returns.
+  </p>
+</section>
 
-        <div class="card">
-          <h3>04 — Build Reputation</h3>
-          <p>
-            Consistent contribution helps build your community reputation.
-          </p>
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <section id="points">
-
-      <h2 class="section-title">Initial Points System</h2>
-
-      <table class="points">
-
-        <tr>
-          <th>Activity</th>
-          <th>Points</th>
-        </tr>
-
-        <tr>
-          <td>Join Telegram</td>
-          <td>+10</td>
-        </tr>
-
-        <tr>
-          <td>Follow X</td>
-          <td>+10</td>
-        </tr>
-
-        <tr>
-          <td>Daily Useful Contribution</td>
-          <td>+5</td>
-        </tr>
-
-        <tr>
-          <td>Approved Community Post</td>
-          <td>+10</td>
-        </tr>
-
-        <tr>
-          <td>Verified Referral</td>
-          <td>+20</td>
-        </tr>
-
-        <tr>
-          <td>Special Campaign</td>
-          <td>Variable</td>
-        </tr>
-
-      </table>
-
-      <div class="note">
-        Points are participation metrics and do not represent
-        guaranteed token allocations, financial returns, or investment returns.
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <footer>
-    © 2026 GEXIGON. Community first.
-  </footer>
+<footer>
+  © 2026 GEXIGON — Community First.
+</footer>
 
 </body>
 </html>
