@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GEXIGON Dashboard</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0f19;
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 20px 8%;
+      border-bottom: 1px solid #222938;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .welcome {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .welcome h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .welcome p {
+      color: #aaa;
+    }
+
+    .points-box {
+      background: #111725;
+      border: 1px solid #222938;
+      border-radius: 15px;
+      padding: 35px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .points-box h2 {
+      color: #aaa;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .points {
+      font-size: 55px;
+      font-weight: bold;
+    }
+
+    .section {
+      background: #111725;
+      border: 1px solid #222938;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 25px;
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+    }
+
+    .task {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      border-bottom: 1px solid #222938;
+    }
+
+    .task:last-child {
+      border-bottom: none;
+    }
+
+    .task p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .task-points {
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 9px 16px;
+      border-radius: 7px;
+      background: #1b2335;
+      color: white;
+      text-decoration: none;
+      border: 1px solid #333b50;
+    }
+
+    .btn:hover {
+      background: #273149;
+    }
+
+    .info {
+      color: #888;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      padding: 40px 20px;
+      border-top: 1px solid #222938;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .welcome h1 {
+        font-size: 34px;
+      }
+
+      .task {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">GEXIGON</div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="https://x.com/gexigon" target="_blank">X</a>
+    <a href="https://t.me/gexigon" target="_blank">Telegram</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="welcome">
+    <h1>GEXIGON Dashboard</h1>
+    <p>Track your contribution and community points.</p>
+  </div>
+
+  <div class="points-box">
+    <h2>Your Total Points</h2>
+    <div class="points">0</div>
+  </div>
+
+  <div class="section">
+
+    <h2>Available Tasks</h2>
+
+    <div class="task">
+      <div>
+        <strong>Join GEXIGON Telegram</strong>
+        <p>Join the official community.</p>
+      </div>
+
+      <div>
+        <span class="task-points">+10</span>
+        <a class="btn" href="https://t.me/gexigon" target="_blank">
+          Join
+        </a>
+      </div>
+    </div>
+
+    <div class="task">
+      <div>
+        <strong>Follow GEXIGON on X</strong>
+        <p>Follow the official GEXIGON account.</p>
+      </div>
+
+      <div>
+        <span class="task-points">+10</span>
+        <a class="btn" href="https://x.com/gexigon" target="_blank">
+          Follow
+        </a>
+      </div>
+    </div>
+
+    <div class="task">
+      <div>
+        <strong>Daily Useful Contribution</strong>
+        <p>Share something useful with the community.</p>
+      </div>
+
+      <div>
+        <span class="task-points">+5</span>
+        <a class="btn" href="https://t.me/gexigon" target="_blank">
+          Submit
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section">
+
+    <h2>Point Rules</h2>
+
+    <div class="task">
+      <span>Join Telegram</span>
+      <strong>+10</strong>
+    </div>
+
+    <div class="task">
+      <span>Follow X</span>
+      <strong>+10</strong>
+    </div>
+
+    <div class="task">
+      <span>Useful Contribution</span>
+      <strong>+5</strong>
+    </div>
+
+    <div class="task">
+      <span>Approved Community Post</span>
+      <strong>+10</strong>
+    </div>
+
+    <div class="task">
+      <span>Verified Referral</span>
+      <strong>+20</strong>
+    </div>
+
+  </div>
+
+  <p class="info">
+    Points are participation metrics and do not represent guaranteed
+    token allocations or financial returns.
+  </p>
+
+</div>
+
+<footer>
+  © 2026 GEXIGON — Community First.
+</footer>
+
+</body>
+</html>
